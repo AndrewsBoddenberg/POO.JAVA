@@ -16,7 +16,7 @@ public class MainLivro {
         livro.setTitulo(sc.next());
 
         System.out.println("Digite o ano que o livro foi públicado");
-        livro.getAnoPublicacao(sc.next());
+        livro.setAnoPublicacao(sc.nextInt());
 
         System.out.println(livro.toString());
 
