@@ -9,7 +9,8 @@ public class Clinica {
     public Clinica(String nome, float cpf, String email) {
 
         this.nome = nome;
-        this.cpf = cpf;
+        setCpf(cpf);
+        this.cpf=cpf;
         this.email = email;
     }
 
@@ -29,7 +30,7 @@ public class Clinica {
         return cpf;
     }
 
-    public void setCpf(float cpf) {
+    public void setCpf (float cpf) {
         this.cpf = cpf;
     }
 
@@ -53,3 +54,5 @@ public class Clinica {
     }
 
 }
+
+
