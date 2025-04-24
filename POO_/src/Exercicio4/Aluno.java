@@ -3,13 +3,13 @@ package Exercicio4;
 public class Aluno {
 
     private String nome;
-    private int matricula;
+    private int idade;
     private double notaFinal;
 
-    public Aluno (String nome, int matricula, double notaFinal) {
+    public Aluno (String nome, int idade, double notaFinal) {
 
         this.nome = nome;
-        this.matricula = matricula;
+        this.idade = idade;
         this.notaFinal = notaFinal;
     }
 
@@ -24,12 +24,12 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public int getMatricula() {
-        return matricula;
+    public int getIdade() {
+        return idade;
     }
 
-    public void setMatricula(int matricula) {
-        this.matricula = matricula;
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
     public double getNotaFinal() {
@@ -43,7 +43,7 @@ public class Aluno {
     public String toString() {
         return "Aluno{" +
                 "nome='" + nome + '\'' +
-                ", matricula=" + matricula +
+                ", matricula=" + idade +
                 ", notaFinal=" + notaFinal +
                 '}';
     }
