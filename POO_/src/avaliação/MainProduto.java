@@ -26,8 +26,6 @@ public class MainProduto {
         System.out.println("Digite o preço do produto ");
         produto2.setPreco(sc.nextFloat());
 
-
-
         System.out.println("Digite a quantidade de produtos ");
         produto2.setQuantidade(sc.nextInt());
 
@@ -35,7 +33,6 @@ public class MainProduto {
         System.out.println(produto2.toString());
 
     }
-
 
 
 }
