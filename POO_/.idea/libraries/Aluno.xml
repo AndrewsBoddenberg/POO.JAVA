@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Aluno">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/Exercicio4/Aluno.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
