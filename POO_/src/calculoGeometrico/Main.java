@@ -15,7 +15,9 @@ public class Main {
                     "Opções: \n" +
                             "0. Sair \n" +
                             "1. Quadrado\n" +
-                            "2. Retângulo\n");
+                            "2. Retângulo\n" +
+                            "3. Circulo\n");
+
             opcao = sc.nextInt();
 
             FormaGeometrica forma;
@@ -31,18 +33,18 @@ public class Main {
                     System.out.println("Digite o o valor do lado do quadrado: ");
                     double lado = sc.nextDouble();
 
-                    FormaGeometrica forma = new Quadrado(cor, lado);
+                    forma = new Quadrado(cor, lado);
 
-                    int opcao2;
+                    int opcao1;
 
                     do {
-                        opcao2 = menuCalculo();
+                        opcao1 = menuCalculo();
 
-                        if (opcao2 < 0 || opcao2 > 3) {
+                        if (opcao1 < 0 || opcao1 > 3) {
                             System.out.println("Opção Invalida!");
                         }
 
-                        switch (opcao2) {
+                        switch (opcao1) {
                             case 1: {
                                 System.out.println("Perimetro: " + forma.calculaPerimetro());
                                 break;
@@ -56,7 +58,7 @@ public class Main {
                                 break;
                             }
                         }
-                    } while (opcao2 != 0);
+                    } while (opcao1 != 0);
 
 
                     break;
@@ -75,35 +77,54 @@ public class Main {
                     forma = new Retangulo(cor, largura, altura, comprimento);
 
 
-                    int opcao3;
-                    do {
-                        opcao3 = menuCalculo();
+                    int opcao2;
 
-                        if (opcao3 < 0 || opcao3 > 3) {
+                    do {
+                        opcao2 = menuCalculo();
+
+                        if (opcao2 < 0 || opcao2 > 3) {
                             System.out.println("Opção Invalida! ");
                         }
-
-                        switch (opcao3) {
+                        switch (opcao2) {
                             case 1: {
-                                System.out.println("Perimetro " + FormaGeometrica.calculaPerimetro());
+                                System.out.println("Perimetro " + forma.calculaPerimetro());
                                 break;
                             }
 
                             case 2: {
-                                System.out.println("Area " + FormaGeometrica.calculaArea());
+                                System.out.println("Area " + forma.calculaArea());
                                 break;
                             }
                             case 3: {
-                                System.out.println("Volume " + FormaGeometrica.calculaVolume());
+                                System.out.println("Volume " + forma.calculaVolume());
                                 break;
                             }
                         }
 
-                    } while (opcao3 != 0);
+                    } while (opcao2 != 0);
 
                     break;
                 }
-            }
+
+                case 3:
+                    System.out.println("Digite a cor do circulo ");
+                    String cor = sc.next();
+                    System.out.println("Selecione o raio");
+                    double raio = sc.nextDouble();
+
+                    forma = new Circulo (cor, raio);
+
+                    int opcao3;
+
+                    do {
+                        opcao3 = menuCalculo();
+                        retornoCalculo(opcao3, forma);
+
+                    }while ((opcao3 !=0));
+
+                    break;
+
+                }
 
         } while (opcao != 0);
 
@@ -115,13 +136,15 @@ public class Main {
                 + "0. Voltar \n"
                 + "1. Perimetro\n"
                 + "2. Area\n"
-                + "3. Volume\n");
+                + "3. Volume\n"
+                + "4. Raio\n");
+
         return sc.nextInt();
     }
 
     static public void retornoCalculo(int opcao, FormaGeometrica forma) {
 
-        if (opcao < 0 || opcao > 3) {
+        if (opcao < 0 || opcao > 4) {
             System.out.println("Opção Invalida!");
         }
 
